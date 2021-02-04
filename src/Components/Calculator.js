@@ -29,6 +29,7 @@ class Calculator extends Component {
       operator: e.target.value
     })
   }
+  // i was lazy, this could be changed to something like "equals"
   sum = (e, num1, num2) =>{
     if (this.state.operator === '+'){
       let resultA = (+num1 + +num2)
