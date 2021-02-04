@@ -18,18 +18,20 @@ class Calculator extends Component {
   componentDidMount = {
   
   }
+  
   setNum = (e, num) => {
     this.setState({ 
       [num]: e.target.value
     })
     console.log(this.state.num1)
   }
+  //changes the operator to the value of which button is selected. 
   setOp = (e) => {
     this.setState({
       operator: e.target.value
     })
   }
-  // i was lazy, this could be changed to something like "equals"
+  // i was lazy, this could be changed to something like "equals" since the function shifts which evaluation it will do based on evaluating the state of operator (this.state.operator) which is changed by the setOp function
   sum = (e, num1, num2) =>{
     if (this.state.operator === '+'){
       let resultA = (+num1 + +num2)
