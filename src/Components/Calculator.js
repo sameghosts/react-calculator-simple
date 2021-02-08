@@ -13,13 +13,15 @@ const changeNum2 = (e) =>{
   setNum2(e.target.value)
 }
   const setOp = (e) => {
+    console.log(e);
     setOperator (e.target.value);
   }
   
   const sum = (e, num1, num2) =>{
     if (operator === '+'){
       let resultA = (+num1 + +num2)
-      setResult(resultA)
+      let resultB = (parseInt(num1) + parseInt(num2))
+      setResult(resultB)
     } else if (operator === '-'){
       let resultA = (+num1 - +num2)
       setResult(resultA)
@@ -40,7 +42,7 @@ const changeNum2 = (e) =>{
       <h1>Add with React!</h1>
 
       <div className="add">
-        <input type="number" name="num1" placeholder="Enter your first number" value={num1} onChange={ changeNum1} />
+        <input type="number" name="num1" placeholder="Enter your first number" value={num1} onChange={changeNum1} />
 
         <span>{operator}</span>
         
